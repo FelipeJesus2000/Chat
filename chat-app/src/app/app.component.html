@@ -1,0 +1,17 @@
+<style>
+</style>
+
+<main class="main">
+  <div class="div-chat">
+    <app-div-conversation (messagesEvent)="handleEventConversation($event)" #divConversation></app-div-conversation>
+  </div>
+  <div class="inputs">
+    <div class="input-text">
+      <app-input (inputEvent)="handleEventInput($event)" (enterEvent)="handleEventButton($event)" #input></app-input>
+    </div>
+    <div class="input-button">
+      <app-button (btnClick)="handleEventButton($event)" [text]="'send'"></app-button>
+    </div>
+  </div>
+</main>
+<router-outlet />

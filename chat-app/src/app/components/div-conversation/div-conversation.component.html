@@ -1,0 +1,18 @@
+<div class="div-conversation" (click)="scrollDown()" (scroll)="toScroll($event)">
+    <div class="scrolldown" hidden><img src="assets/arrow-icon.png" style="width: 25px;"></div>
+    <!-- <div class="{{ msg.type }} receiver">{{ msg.text }}</div>  --> 
+    @for(msg of messages; track msg.text){
+        <div #msg class="msg {{ msg.type }}">{{ msg.text }}</div>
+    }
+    
+</div>
+
+ <!-- <div class="msg sender">Sender!</div>
+    <div class="msg receiver">Receiver!</div>
+    <div class="msg sender">Sender!</div>
+    <div class="msg sender">Sender!</div>
+    <div class="msg receiver">Receiver!</div>
+    <div class="msg receiver">Receiver!</div>
+    <div class="msg receiver">Receiver!</div>
+    <div class="msg receiver">Receiver!</div>
+    <div class="msg receiver">Receiver!</div> -->
